@@ -6,6 +6,7 @@ import logger from './utils/logger';
 import { routes } from './routes/routes';
 
 const PORT = config.get<number>('port');
+app.use(express.json());
 app.listen(PORT, () => {
   logger.info(`App is running at http://localhost:${PORT}`);
 
